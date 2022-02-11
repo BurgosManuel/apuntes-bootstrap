@@ -1,0 +1,53 @@
+body {
+    padding: 1em;
+}
+
+h1 {
+    text-align: center;
+    text-decoration: underline;
+}
+
+p {
+    font-size: 1.2em;
+}
+
+a, a:link, a:visited {
+    color: inherit;
+    text-decoration: underline;
+}
+
+.redes{
+    list-style: none;
+}
+
+li {
+    font-size: 1.1rem;
+    margin-bottom: .5rem;
+}
+
+
+.discord::before {
+    background-image: url(../assets/discord-icon.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    display: inline-block;
+    position: relative;
+    top: .3em;
+    width: 1.5em;
+    height: 1.5em;
+    margin-right: .5em;
+    content:" ";
+}
+
+.whatsapp::before {
+    background-image: url(../assets/whatsapp-icon.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    display: inline-block;
+    position: relative;
+    top: .5em;
+    width: 1.5em;
+    height: 1.5em;
+    margin-right: .5em;
+    content:" ";
+}
