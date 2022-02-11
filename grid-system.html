@@ -24,19 +24,32 @@
     <h2>Contenedor (<em>"Container")</em></h2>
     <details>
       <summary><em>Explicación</em></summary>
-        <p>- En Bootstrap necesitamos generar un contenedor con la clase <code title="Ajusta el ancho del contenedor en pixeles y se adapta por 'corte'.">.container</code> o <code title="Ajusta el ancho del contenedor al 100% y se adapta de forma fluida.">.container-fluid</code> que guarde todas las <b>filas</b> y <b>columnas</b>.<br>- En este caso lo destacamos generando un <em class="red">outline rojo</em> con CSS.<br>- Podemos ver los distintos valores para un contenedor en el siguiente <a href="https://getbootstrap.com/docs/5.0/layout/containers/#how-they-work" target="_BLANK">enlance.</a></p>
+      <ul>
+        <li>En Bootstrap necesitamos generar un contenedor con la clase <code title="Ajusta el ancho del contenedor en pixeles y se adapta por 'corte'.">.container</code> o <code title="Ajusta el ancho del contenedor al 100% y se adapta de forma fluida.">.container-fluid</code> que guarde todas las <b>filas</b> y <b>columnas</b>.</li>
+        <li>En este caso lo destacamos generando un <em class="red">outline rojo</em> con CSS.</li>
+        <li>Podemos ver los distintos valores para un contenedor en el siguiente <a href="https://getbootstrap.com/docs/5.0/layout/containers/#how-they-work" target="_BLANK">enlance.</a></li>
+      </ul>
     </details>
     <hr>
     <h2>Filas <em>("Rows")</em></h2>
     <details>
       <summary><em>Explicación</em></summary>
-        <p>- La manera de distribuir los elementos en Bootstrap es a través de la creación de <b>Filas o "Rows"</b> haciendo uso de la clase <code>.row</code>.<br>- Dentro de la misma deben haber anidadas <b>únicamente columnas.</b><br>- Cada Fila puede tener hasta <b>12 columnas</b> y aunque no es necesario utilizarlas todas, debemos especificar un tamaño de forma tal que se ocupen los 12 espacios. EJ: Utilizar 2 columnas que ocupen 6 lugares (6 + 6 = 12) o 3 columnas que ocupen 4 lugares (4 + 4 + 4 = 12).</p>
+      <ul>
+        <li>La manera de distribuir los elementos en Bootstrap es a través de la creación de <b>Filas o "Rows"</b> haciendo uso de la clase <code>.row</code>.</li>
+        <li>Dentro de la misma deben haber anidadas <b>únicamente columnas.</b></li>
+        <li>Cada Fila puede tener hasta <b>12 columnas</b> y aunque no es necesario utilizarlas todas, debemos especificar un tamaño de forma tal que se ocupen los 12 espacios. EJ: Utilizar 2 columnas que ocupen 6 lugares (6 + 6 = 12) o 3 columnas que ocupen 4 lugares (4 + 4 + 4 = 12).</li>
+      </ul>
     </details>
     <hr>
     <h2>Columnas <em>("Columns")</em></h2>
     <details>
       <summary><em>Explicación</em></summary>
-        <p>- Para crear una columna debemos asignar la clase <code>.col</code>, esto <b>asignará un tamaño automático</b> a la misma por defecto.<br>- Para especificar el tamaño debemos agregar un valor a la clase: <code>.col-X</code>, reemplazamos la <em>X</em> por un valor del 1 al 12. EJ: <code>col-4</code> genera una columna que ocupa 1/3 del contenedor o <code>col-6</code>, que ocupa la mitad del contenedor.<br>- Podemos agregar otro valor a las columnas para especificar <b>a partir de qué tamaño</b> se deben distribuir las mismas. EJ: <code>.col-sm-4</code> indica que la columna ocupará 1/3 del tamaño del contenedor si el mismo tiene un <b>ancho igual o mayor a 576px</b>, caso contrario, <b>se apilarán.</b><br>- Estos valores se pueden revisar en la <a href="https://getbootstrap.com/docs/4.0/layout/grid/#grid-options" target="_BLANK">siguiente tabla.</a></p>
+      <ul>
+        <li>Para crear una columna debemos asignar la clase <code>.col</code>, esto <b>asignará un tamaño automático</b> a la misma por defecto.</li>
+        <li>Para especificar el tamaño debemos agregar un valor a la clase: <code>.col-X</code>, reemplazamos la <em>X</em> por un valor del 1 al 12. EJ: <code>col-4</code> genera una columna que ocupa 1/3 del contenedor o <code>col-6</code>, que ocupa la mitad del contenedor.</li>
+        <li>Podemos agregar otro valor a las columnas para especificar <b>a partir de qué tamaño</b> se deben distribuir las mismas. EJ: <code>.col-sm-4</code> indica que la columna ocupará 1/3 del tamaño del contenedor si el mismo tiene un <b>ancho igual o mayor a 576px</b>, caso contrario, <b>se apilarán.</b></li>
+        <li>Estos valores se pueden revisar en la <a href="https://getbootstrap.com/docs/4.0/layout/grid/#grid-options" target="_BLANK">siguiente tabla.</a></li>
+      </ul>
     </details>
     <hr>
     <h2>Ejemplos de Grilla dentro de un <code>.container</code></h2>
@@ -102,7 +115,12 @@
       <h2>Columnas <em>MIXTAS</em> de distinto tamaño. <br>(Columnas <em>Automáticas</em> + Columnas <em>Fijas</em> + Columnas <em>Responsive</em>).</h2>
       <details>
         <summary><em>Explicación</em></summary>
-        <p>En este caso contamos con 3 columnas con distintas clases:<br>-Columna 1: Está ubicada más a la izquierda y tiene la clase <code>.col</code>. Se <b>adapta automáticamente</b> al espacio restante en el contenedor.<br>-Columna 2: Está ubicada en el centro y tiene la clase <code>.col-6</code>. Ocupa <b>6 partes del contenedor</b> independientemente del tamaño del mismo, <b>no se apila.</b><br>- -Columna 3: Está ubicada más a la derecha y tiene la clase <code>.col-sm-4</code>. Ocupa 4 partes del contenedor si el mismo es <b>Mayor o Igual a 576px</b>, caso contrario se apila. (En esta ocasión se apila antes de cumplir esta condición ya que la columna 1 y columna 2 ocupan demasiado espacio) </p>
+        <p>En este caso contamos con 3 columnas con distintas clases:<br>
+          <ul>
+            <li>Columna 1: Está ubicada más a la izquierda y tiene la clase <code>.col</code>. Se <b>adapta automáticamente</b> al espacio restante en el contenedor.</li>
+            <li>Columna 2: Está ubicada en el centro y tiene la clase <code>.col-6</code>. Ocupa <b>6 partes del contenedor</b> independientemente del tamaño del mismo, <b>no se apila.</b></li>
+            <li>Columna 3: Está ubicada más a la derecha y tiene la clase <code>.col-sm-4</code>. Ocupa 4 partes del contenedor si el mismo es <b>Mayor o Igual a 576px</b>, caso contrario se apila. (En esta ocasión se apila antes de cumplir esta condición ya que la columna 1 y columna 2 ocupan demasiado espacio)</li>
+          </ul>
       </details>
       <div class="col light"><h3>¡Hola! Soy una columna 🖐</h3></div>
       <div class="col-6 light"><h3>¡Hola! Soy una columna 🖐</h3></div>

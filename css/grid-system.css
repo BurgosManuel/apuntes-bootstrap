@@ -7,6 +7,10 @@ body {
     text-decoration: none;
 }
 
+li {
+    margin-bottom: 1em;
+}
+
 i {
     padding-right: .3em;
 }
@@ -33,6 +37,7 @@ article:first-child {
 
 details {
     margin-bottom: 1em;
+    text-align: left;
 }
 
 details.ejemplos[open] summary::after {
