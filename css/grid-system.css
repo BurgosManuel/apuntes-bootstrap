@@ -7,12 +7,12 @@ body {
     text-decoration: none;
 }
 
-li {
-    margin-bottom: 1em;
+i {
+    margin: .3rem;
 }
 
-i {
-    padding-right: .3em;
+li {
+    margin-bottom: 1em;
 }
 
 code[title]:hover, .inicio:hover {
