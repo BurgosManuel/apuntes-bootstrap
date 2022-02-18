@@ -15,12 +15,6 @@ li {
     margin-bottom: 1em;
 }
 
-code[title]:hover, .inicio:hover {
-    text-decoration: underline;
-    cursor: pointer;
-    color: blue;
-}
-
 .red {
     color: red;
 }
@@ -39,6 +33,12 @@ details {
     margin-bottom: 1em;
     text-align: left;
 }
+
+/*
+=====================================================
+MODIFICAR BOTÓN DE "MOSTRAR EJEMPLOS"
+=====================================================
+*/
 
 details.ejemplos[open] summary::after {
     content: attr(data-open)
