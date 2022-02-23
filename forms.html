@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap - FORMULARIOS</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/forms.css" />
+  </head>
+  <body>
+    <!--Creamos el contenedor para las filas.-->
+    <div><i class="bi bi-arrow-left-circle-fill"></i><a href="index.html" class="inicio">Volver al índice</a></div>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col">
+                <h1>Formularios - Bootstrap</h1>
+                <ul>
+                    <li>Utilizando Bootstrap podemos agilizar diversos procesos de estilización de formularios y sus elementos.</li>
+                    <li>A continuación veremos diversas las clases que le otorgan estilos a nuestros elementos HTML.</li>
+                </ul>
+                <hr>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12">
+                <h2>Controles de Formulario <i>(Form Controls)</i></h2>
+                <ul>
+                    <li>Los controles de formulario son aquellos elementos con los que el usuario interactúa, como los <code>&ltinput&gt</code> o los <code>&lttextarea&gt</code>.</li>
+                    <li>Los estilos que veremos en los ejemplos son: <b>dimensión</b>, <b>habilitado/deshabilitado</b> y un <b>switch personalizado</b> propio de Bootstrap.</li>
+                </ul>
+            </div>
+            <div class="col-md-12">
+                <hr class="mw-75">
+                <h3>Dimensiones</h3>
+                <form>
+                    <fieldset>
+                        <h4>Variaciones de tamaño para elementos <code>&ltinput&gt</code> de tipo <code>text</code>.</h4>
+                        <p><i>Es recomedable colocar el <code>&ltinput&gt</code> y su respectivo <code>&ltlabel&gt</code> dentro de un <code>&ltdiv&gt</code> para que se coloque uno debajo del otro, caso contrario, se colocará <b>al lado.</b></i></p>
+                        
+                        <div class="mb-2 mw-75"> 
+                            <!-- La clase "mb-2" genera un "margin-bottom de 2 píxeles" para el div. La clase w-75 genera un "max-width de 75%" para evitar que el formulario ocupe toda la pantalla.-->
+                            <label for="textEnabled" class="form-label">Campo de texto con la clase <code>.form-control</code> por defecto.</label> 
+                            <!--La clase "form-label" le otorga pequeños cambios al elemento, como un leve "margin-bottom".-->
+                            <input id="textEnabled" type="text" class="form-control" value="¡Modificame! 😁"> 
+                            <!--La clase "form-control" le otorga los estilos al input. -->
+                        </div>
+
+                        <div class="mb-2 mw-75"> 
+                            <!-- La clase "mb-2" genera un "margin-bottom de 2 píxeles" para el div. La clase mw-75 genera un "max-width de 75%" para evitar que el formulario ocupe toda la pantalla.-->
+                            <label for="largeText" class="form-label">Campo de texto con las clases <code>.form-control form-control-lg</code></label> 
+                            <!--La clase "form-label" le otorga pequeños cambios al elemento, como un leve margin-bottom.-->
+                            <input id="largeText" type="text" class="form-control form-control-lg" value="¡Modificame! 😁"> <!--La clase "form-control" le otorga los estilos al input. La clase "form-control-lg" determina el tamaño del input, en este caso "large" o "grande."-->
+                        </div>
+
+                        <div class="mb-2 mw-75"> 
+                            <!-- La clase "mb-2" genera un "margin-bottom de 2 píxeles" para el div. La clase mw-75 genera un "max-width de 75%" para evitar que el formulario ocupe toda la pantalla.-->
+                            <label for="smallText" class="form-label">Campo de texto con las clases <code>.form-control form-control-sm</code></label> 
+                            <!--La clase "form-label" le otorga pequeños cambios al elemento, como un leve margin-bottom.-->
+                            <input id="smallText" type="text" class="form-control form-control-sm" value="¡Modificame! 😁"> <!--La clase "form-control" le otorga los estilos al input. La clase "form-control-sm" determina el tamaño del input, en este caso "small" o "pequeño." -->
+                        </div>
+                    </fieldset>
+                </form>
+            </div>
+
+            <div class="col-md-12">
+                <hr class="mw-75">
+                <h3>Habilitar/Deshabilitar</h3>
+                <form>
+                    <fieldset>
+                        <h4>Variaciones de disponibilidad para elementos <code>&ltinput&gt</code> de tipo <code>text</code>.</h4>
+                        <p><i>Es recomedable colocar el <code>&ltinput&gt</code> y su respectivo <code>&ltlabel&gt</code> dentro de un <code>&ltdiv&gt</code> para que se coloque uno debajo del otro, caso contrario, se colocará <b>al lado.</b></i></p>
+
+                        <div class="mb-2 mw-75"> 
+                            <!-- La clase "mb-2" genera un "margin-bottom de 2 píxeles" para el div. La clase mw-75 genera un "max-width de 75%" para evitar que el formulario ocupe toda la pantalla.-->
+                            <label for="disabledText" class="form-label">Campo de texto con la clase <code>.form-control</code> y el <b>atributo</b> <code>disabled</code></label> 
+                            <!--La clase "form-label" le otorga pequeños cambios al elemento, como un leve "margin-bottom".-->
+                            <input id="disabledText" type="text" class="form-control" value="No me puedes modificar 🙁" disabled> 
+                            <!--La clase "form-control" le otorga los estilos al input. El atributo "disabled" impide seleccionar y modificar el input, además le otorga el estilo "grisáceo" -->
+                        </div>
+
+                        <div class="mb-2 mw-75"> 
+                            <!-- La clase "mb-2" genera un "margin-bottom de 2 píxeles" para el div. La clase mw-75 genera un "max-width de 75%" para evitar que el formulario ocupe toda la pantalla.-->
+                            <label for="readonlyText" class="form-label">Campo de texto con la clase <code>.form-control</code> y el <b>atributo</b> <code>readonly</code></label> 
+                            <!--La clase "form-label" le otorga pequeños cambios al elemento, como un leve "margin-bottom".-->
+                            <input id="readonlyText" type="text" class="form-control" value="No me puedes modificar 🙁, pero me puedes seleccionar 🖱" readonly > 
+                            <!--La clase "form-control" le otorga los estilos al input. El atributo "readonly" permite únicamente seleccionar el input y le otorga el estilo "grisáceo"-->
+                        </div>
+
+                        <div class="mb-2 mw-75"> 
+                            <!-- La clase "mb-2" genera un "margin-bottom de 2 píxeles" para el div. La clase mw-75 genera un "max-width de 75%" para evitar que el formulario ocupe toda la pantalla.-->
+                            <label for="disabledReadonlyText" class="form-label">Campo de texto con la clase <code>.form-control</code> y los <b>atributos</b> <code>disabled</code> y <code>readonly</code></label> 
+                            <!--La clase "form-label" le otorga pequeños cambios al elemento, como un leve "margin-bottom".-->
+                            <input id="disabledReadonlyText" type="text" class="form-control" value="No me puedes modificar, ni seleccionar 🙁" disabled readonly> 
+                            <!--La clase "form-control" le otorga los estilos al input. Al usar "disabled" y "readonly", no podemos modificar ni seleccionar el input, también otorga el estilo grisáceo -->
+                        </div>
+                    </fieldset>
+                </form>
+            </div>
+
+            <div class="col-md-12">
+                <hr class="mw-75">
+                <h3>Tamaños y disponibilidad en otros elementos.</h3>
+                <form>
+                    <fieldset>
+                        <h4>Estilos a elementos como: <code>select</code>, <code>radio</code> y <code>checkbox</code>.</h4>
+                        <p><i>Las clases y atributos abordadas previamente no son exclusivos de los <code>&ltinput&gt</code>, sin embargo, varían un poco dependiendo del elemento a utilizar.</i></p>
+
+                        <hr class="w-50">
+                        <h5>Elementos <code>&ltselect&gt</code></h5>
+                        <div class="mb-2 mw-75"> 
+                            <!-- La clase "mb-2" genera un "margin-bottom de 2 píxeles" para el div. La clase mw-75 genera un "max-width de 75%" para evitar que el formulario ocupe toda la pantalla.-->
+                            <label for="selectDefault" class="form-label">Elemento <code>&ltselect&gt</code> con la clase <code>.form-select</code>.</label> 
+                            <!--La clase "form-label" le otorga pequeños cambios al elemento, como un leve "margin-bottom".-->
+                            <select name="selectDefault" id="selectDefault" class="form-select">
+                                <option selected>¡Seleccioname! 🙋‍♂️</option>
+                                <option value="1">Soy la opción 1 😋</option>
+                                <option value="2">Soy la opción 2 😎</option>
+                                <option value="3">Soy la opción 3 🤩</option>
+                            </select>
+                            <!--La clase "form-select" le otorga los estilos al elemento select. -->
+                        </div>
+
+                        <div class="mb-2 mw-75"> 
+                            <!-- La clase "mb-2" genera un "margin-bottom de 2 píxeles" para el div. La clase mw-75 genera un "max-width de 75%" para evitar que el formulario ocupe toda la pantalla.-->
+                            <label for="selectSmall" class="form-label">Elemento <code>&ltselect&gt</code> con las clases <code>.form-select form-select-sm</code>.</label> 
+                            <!--La clase "form-label" le otorga pequeños cambios al elemento, como un leve "margin-bottom".-->
+                            <select name="selectSmall" id="selectSmall" class="form-select form-select-sm">
+                                <option selected>¡Seleccioname! 🙋‍♂️</option>
+                                <option value="1">Soy la opción 1 😋</option>
+                                <option value="2">Soy la opción 2 😎</option>
+                                <option value="3">Soy la opción 3 🤩</option>
+                            </select>
+                            <!--La clase "form-select" le otorga los estilos al elemento select. La clase "form-select-sm" determina el tamaño del input, en este caso "small" o "pequeño." -->
+                        </div>
+
+                        <div class="mb-2 mw-75"> 
+                            <!-- La clase "mb-2" genera un "margin-bottom de 2 píxeles" para el div. La clase mw-75 genera un "max-width de 75%" para evitar que el formulario ocupe toda la pantalla.-->
+                            <label for="selectDisabled" class="form-label">Elemento <code>&ltselect&gt</code> con la clase <code>.form-select</code> y el <b>atributo</b> <code>disabled</code>.</label> 
+                            <!--La clase "form-label" le otorga pequeños cambios al elemento, como un leve "margin-bottom".-->
+                            <select name="selectDisabled" id="selectDisabled" class="form-select" disabled>
+                                <option selected>¡Seleccioname! 🙋‍♂️</option>
+                                <option value="1">Soy la opción 1 😋</option>
+                                <option value="2">Soy la opción 2 😎</option>
+                                <option value="3">Soy la opción 3 🤩</option>
+                            </select>
+                            <!--La clase "form-select" le otorga los estilos al elemento select. El atributo disabled impide modificar o seleccionar el elemento <select>." -->
+                        </div>
+
+                        <hr class="w-50">
+                        <h5>Elementos <code>&ltinput&gt</code> de tipo <code>checkbox</code></h5>
+                        <p>En este caso, el <code>&ltdiv&gt</code> contenedor lleva la clase <code>.form-check</code>, los elementos <code>&ltinput&gt</code> de tipo <code>checkbox</code> llevan como clase <code>.form-check-input</code> y sus <code>label</code> correspondientes llevan la clase <code>.form-check-label</code>.</p>
+                        <div class="mb-2 mw-75"> 
+                            <!-- La clase "mb-2" genera un "margin-bottom de 2 píxeles" para el div. La clase mw-75 genera un "max-width de 75%" para evitar que el formulario ocupe toda la pantalla.-->
+                            <div class="form-check">
+                                <input id="oneCB" type="checkbox" class="form-check-input">
+                                <label for="oneCB" class="form-check-label">Soy un checkbox por defecto 😋</label>
+                            </div>
+                            <div class="form-check">
+                                <input id="twoCB" type="checkbox" class="form-check-input" checked>
+                                <label for="twoCB" class="form-check-label">Soy un checkbox seleccionado 😎 <i>(Atributo <code>checked</code>)</i></label>
+                            </div>
+                            <div class="form-check">
+                                <input id="threeCB" type="checkbox" class="form-check-input">
+                                <label for="threeCB" class="form-check-label">Soy un checkbox indeterminado 😅 <a href="https://www.w3schools.com/jsref/prop_checkbox_indeterminate.asp#:~:text=The%20indeterminate%20property%20sets%20or,be%20set%20by%20a%20JavaScript." target="_BLANK" class="link-primary"><i>(Se necesita JavaScript)</i></a></label>
+                            </div>
+                            <div class="form-check">
+                                <input id="fourCB" type="checkbox" class="form-check-input" disabled>
+                                <label for="fourCB" class="form-check-label">Soy un checkbox deshabilitado 🙁 <i>(Atributo <code>disabled</code>)</i></label>
+                            </div>
+                            <div class="form-check">
+                                <input id="fiveCB" type="checkbox" class="form-check-input" disabled checked>
+                                <label for="fiveCB" class="form-check-label">Soy un checkbox seleccionado y deshabilitado 🤔 <i>(Atributos <code>disabled</code> y <code>checked</code>)</i></label>
+                            </div>
+                        </div>
+
+                        <hr class="w-50">
+                        <h5>Elementos <code>&ltinput&gt</code> de tipo <code>radio</code></h5>
+                        <p>Utilizan las mismas clases que los <code>&ltinput&gt</code> de tipo <code>checkbox</code>, tanto en los <code>&ltdiv&gt</code>, como en los <code>&ltlabel&gt</code>. La única diferencia es que debemos especificar que al <code>&ltinput&gt</code> que sea de tipo <code>checkbox</code>.<br><u>RECORDATORIO:</u> Los radios se utilizan para seleccionar <b>una de varias opciones</b> por lo que <b>todos</b> deben tener el mismo valor en su atributo <code>name=""</code>, de esta forma solo podremos seleccionar uno a la vez.</p>
+                        <div class="mb-2 mw-75"> 
+                            <!-- La clase "mb-2" genera un "margin-bottom de 2 píxeles" para el div. La clase mw-75 genera un "max-width de 75%" para evitar que el formulario ocupe toda la pantalla.-->
+                            <div class="form-check">
+                                <input name="radio" id="oneRadio" type="radio" class="form-check-input">
+                                <label for="oneRadio" class="form-check-label">Soy un radio por defecto 😋</label>
+                            </div>
+                            <div class="form-check">
+                                <input name="radio" id="twoRadio" type="radio" class="form-check-input" checked>
+                                <label for="twoRadio" class="form-check-label">Soy un radio seleccionado 😎 <i>(Atributo <code>checked</code>)</i></label>
+                            </div>
+                            <div class="form-check">
+                                <input name="radio" id="threeRadio" type="radio" class="form-check-input" disabled>
+                                <label for="threeRadio" class="form-check-label">Soy un radio deshabilitado 🙁 <i>(Atributo <code>disabled</code>)</i></label>
+                            </div>
+                            <div class="form-check">
+                                <input id="fourRadio" type="radio" class="form-check-input" disabled checked>
+                                <label for="fourRadio" class="form-check-label">Soy un radio seleccionado y deshabilitado 🤔 <i>(Atributos <code>disabled</code> y <code>checked</code>)</i></label>
+                            </div>
+                        </div>
+
+                        <hr class="w-50">
+                        <h5><u>SWITCHES:</u> Elementos <code>&ltinput&gt</code> de tipo <code>checkbox</code> (Personalizados por Bootstrap)</h5>
+                        <p>En progreso...</p>
+                        <div class="mb-2 mw-75"> 
+                            <!-- La clase "mb-2" genera un "margin-bottom de 2 píxeles" para el div. La clase mw-75 genera un "max-width de 75%" para evitar que el formulario ocupe toda la pantalla.-->
+                            <div class="form-check form-switch">
+                                <input id="oneSwitch" type="checkbox" class="form-check-input">
+                                <label for="oneSwitch" class="form-check-label">Soy un switch por defecto 😋</label>
+                            </div>
+                            <div class="form-check form-switch">
+                                <input id="twoSwitch" type="checkbox" class="form-check-input" checked >
+                                <label for="twoSwitch" class="form-check-label">Soy un switch seleccionado 😎 <i>(Atributo <code>checked</code>)</i></label>
+                            </div>
+                            <div class="form-check form-switch">
+                                <input id="threeSwitch" type="checkbox" class="form-check-input" disabled>
+                                <label for="threeSwitch" class="form-check-label">Soy un switch deshabilitado 🙁 <i>(Atributo <code>disabled</code>)</i></label>
+                            </div>
+                            <div class="form-check form-switch">
+                                <input id="fourSwitch" type="checkbox" class="form-check-input" checked disabled>
+                                <label for="fourSwitch" class="form-check-label">Soy un switch seleccionado y deshabilitado 🤔 <i>(Atributos <code>disabled</code> y <code>checked</code>)</i></label>
+                            </div>
+                        </div>
+                        <hr>
+                    </fieldset>
+                </form>
+            </div>
+
+        </div>
+
+
+
+
+    </div>
+    
+
+
+<script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+    crossorigin="anonymous"
+  >
+</script>
+<script src="js/forms.js"></script>
+</body>
+</html>
