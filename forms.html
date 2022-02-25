@@ -26,6 +26,7 @@
                 <ul>
                     <li>Utilizando Bootstrap podemos agilizar diversos procesos de estilización de formularios y sus elementos.</li>
                     <li>A continuación veremos diversas las clases que le otorgan estilos a nuestros elementos HTML.</li>
+                    <li><u><b>IMPORTANTE:</b></u> Al final de esta página podemos ver un <b>ejemplo de formulario</b> utilizando lo que veremos a continuación. Podés saltar directamente al formulario haciendo <a href="#final-form" class="link-primary">CLICK AQUÍ.</a></li>
                 </ul>
                 <hr>
             </div>
@@ -185,7 +186,7 @@
 
                         <hr class="w-50">
                         <h5>Elementos <code>&ltinput&gt</code> de tipo <code>radio</code></h5>
-                        <p>Utilizan las mismas clases que los <code>&ltinput&gt</code> de tipo <code>checkbox</code>, tanto en los <code>&ltdiv&gt</code>, como en los <code>&ltlabel&gt</code>. La única diferencia es que debemos especificar que al <code>&ltinput&gt</code> que sea de tipo <code>checkbox</code>.<br><u>RECORDATORIO:</u> Los radios se utilizan para seleccionar <b>una de varias opciones</b> por lo que <b>todos</b> deben tener el mismo valor en su atributo <code>name=""</code>, de esta forma solo podremos seleccionar uno a la vez.</p>
+                        <p>Utilizan las mismas clases que los <code>&ltinput&gt</code> de tipo <code>checkbox</code>, tanto en los <code>&ltdiv&gt</code>, como en los <code>&ltlabel&gt</code>. La única diferencia es que debemos especificar al <code>&ltinput&gt</code> el tipo <code>radio</code>.<br><u>RECORDATORIO:</u> Los radios se utilizan para seleccionar <b>una de varias opciones</b> por lo que <b>todos</b> deben tener el mismo valor en su atributo <code>name=""</code>, de esta forma solo podremos seleccionar uno a la vez.</p>
                         <div class="mb-2 mw-75"> 
                             <!-- La clase "mb-2" genera un "margin-bottom de 2 píxeles" para el div. La clase mw-75 genera un "max-width de 75%" para evitar que el formulario ocupe toda la pantalla.-->
                             <div class="form-check">
@@ -208,7 +209,7 @@
 
                         <hr class="w-50">
                         <h5><u>SWITCHES:</u> Elementos <code>&ltinput&gt</code> de tipo <code>checkbox</code> (Personalizados por Bootstrap)</h5>
-                        <p>En progreso...</p>
+                        <p>Los <b>switches</b> son elementos <code>&ltinput&gt</code> de tipo <code>checkbox</code>, a los que se les asigna el estilo de 'switch'.<br>Para obtener estos estilos, debemos agregar las clases <code>.form-check form-switch</code> al <code>&ltdiv&gt</code> que contiene el <code>&ltinput&gt</code> y el <code>&ltlabel&gt</code>.</p>
                         <div class="mb-2 mw-75"> 
                             <!-- La clase "mb-2" genera un "margin-bottom de 2 píxeles" para el div. La clase mw-75 genera un "max-width de 75%" para evitar que el formulario ocupe toda la pantalla.-->
                             <div class="form-check form-switch">
@@ -232,10 +233,133 @@
                     </fieldset>
                 </form>
             </div>
+        </div>
+        <div class="row justify-content-center" id="final-form">
+            <div class="col-lg-12">
+                <h2>Ejemplo de formulario final.</h2>
+                <p>A continuación un ejemplo de formulario usando algunos de los elementos que vimos hasta ahora. ¡Te invito a crear el tuyo propio!</p>
+                <hr>
+            </div>
+                <div class="col-lg-6">
+                    <h3 class="text-center">¡Contáctame!</h3>
+                    <form action="">
+                        <fieldset class="personal-info">
+                            <hr>
+                            <h5>Datos personales</h5>
+                            <div class="mb-3">
+                                <label for="Nombre" class="form-label">Nombre:</label>
+                                <input type="text" name="Nombre" id="Nombre" class="form-control" placeholder="EJ: José Pérez" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="Email" class="form-label">Email:</label>
+                                <input type="email" name="Email" id="Email" class="form-control" placeholder="EJ: jose31@gmail.com" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="Edad" class="form-label">Edad:<i>(Opcional)</i></label>
+                                <input type="number" name="Edad" id="Edad" class="form-control" placeholder="EJ: 31" max="125">
+                            </div>
+                        </fieldset>
+                        <fieldset class="user-feedback">
+                            <hr>
+                            <h5>¡Tu opinión importa!</h5>
+                            <div class="mb-3">
+                                <label for="selectOpinion" class="form-label">¿Cómo calificarias esta página?</label>
+                                <select name="userOpinion" id="selectOpinion" class="form-select" required>
+                                    <option value="" selected disabled>¡Elige una opción! 🙋‍♂️</option>
+                                    <option value="decente">Decente 😐</option>
+                                    <option value="meGusta">Me gustó 😊</option>
+                                    <option value="meEncanta">¡Me encantó! 🥰</option>
+                                </select>
+                            </div>
+
+                            <div class="mb-3">
+
+                                <label class="form-label">¿Qué  sección te gustó más?</label>
+                                <div class="form-check">
+                                    <label for="radioOne" class="form-check-label">
+                                        Seccion 1 (Sistema de Grillas)
+                                    </label>
+                                    <input type="radio" class="form-check-input" name="radio" id="radioOne" required>
+                                </div>
+
+                                <div class="form-check">
+                                    <label for="radioTwo" class="form-check-label">
+                                        Seccion 2 (Imágenes y Figuras)
+                                    </label>
+                                    <input type="radio" class="form-check-input" name="radio" id="radioTwo" required>
+                                </div>
+
+                                <div class="form-check">
+                                    <label for="radioThree" class="form-check-label">
+                                        Seccion 3 (Tablas)
+                                    </label>
+                                    <input type="radio" class="form-check-input" name="radio" id="radioThree" required>
+                                </div>
+                                
+                                <div class="form-check">
+                                    <label for="radioFour" class="form-check-label">
+                                        Seccion 4 (Formularios)
+                                    </label>
+                                    <input type="radio" class="form-check-input" name="radio" id="radioFour" required>
+                                </div>
+
+                                <div class="form-check">
+                                    <label for="radioFive" class="form-check-label">
+                                        Seccion 5 (En Progreso...)
+                                    </label>
+                                    <input type="radio" class="form-check-input" name="radio" id="radioFive" disabled>
+                                </div>
+
+                            </div>
+
+                            <div class="mb-3 checkboxFeedback">
+                                <label class="form-label">¿Qué puntos mejorarías? (Puedes elegir más de uno)</label>
+
+                                <div class="form-check">
+                                    <label for="checkOne" class="form-check-label">Diseño</label>
+                                    <input name="optionOne" type="checkbox" class="form-check-input requiredCheckbox" id="checkOne" required>
+                                </div>
+
+                                <div class="form-check">
+                                    <label for="checkTwo" class="form-check-label">Organización del contenido</label>
+                                    <input name="optionTwo" type="checkbox" class="form-check-input requiredCheckbox" id="checkTwo" required>
+                                </div>
+
+                                <div class="form-check">
+                                    <label for="checkThree" class="form-check-label">Ejemplos</label>
+                                    <input name="optionThree" type="checkbox" class="form-check-input requiredCheckbox" id="checkThree" required>
+                                </div>
+
+                                <div class="my-3">
+                                    <label for="" class="form-check-label">Otro punto...<i>(Opcional)</i></label>
+                                    <textarea class="form-control" rows="3" placeholder="NOTA: Esto es un elemento &lt textarea &gt con la clase .form-control dentro de un &lt div &gt." style="resize:none;"></textarea>
+                                </div>
+                            </div>
+                        </fieldset>
+                        <fieldset>
+                            <hr>
+                            <h5>Ya casi...</h5>
+
+                            <div class="form-check form-switch mb-3">
+                                <input name="optionOne" type="checkbox" class="form-check-input" id="termSwitch" required>
+                                <label for="termSwitch" class="form-check-label">Acepto activar este switch para poder enviar el formulario.</label>
+                            </div>
+
+                            <div class="form-check form-switch mb-3">
+                                <input type="checkbox" class="form-check-input" id="termSwitch" required>
+                                <label for="termSwitch" class="form-check-label">Y... este también 😋.</label>
+                            </div>
+
+                            <div class="mb-3 text-center">
+                                <button type="submit" class="btn btn-primary">¡Enviar!</button>
+                            </div>
+                            <hr>
+                        </fieldset>
+                    </form>
+                </div>
+            
 
         </div>
-
-
 
 
     </div>
