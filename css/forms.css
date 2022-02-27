@@ -1,6 +1,7 @@
 .inicio, .inicio:link, .inicio:visited {
     color: inherit;
     text-decoration: none;
+    margin: .5rem;
 }
 
 i {
@@ -21,4 +22,9 @@ input::-webkit-inner-spin-button {
 /* Firefox */
 input[type=number] {
   -moz-appearance: textfield;
+}
+
+
+h1, h2, h3 {
+  margin-bottom: 1rem !important;
 }

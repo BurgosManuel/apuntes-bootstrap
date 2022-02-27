@@ -18,8 +18,9 @@ li {
 .inicio, .inicio:link, .inicio:visited {
     color: inherit;
     text-decoration: none;
+    margin: .5rem;
 }
 
 i {
-    margin: .3rem
+    margin: .3rem;
 }
