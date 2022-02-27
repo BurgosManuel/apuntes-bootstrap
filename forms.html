@@ -248,11 +248,11 @@
                             <h5>Datos personales</h5>
                             <div class="mb-3">
                                 <label for="Nombre" class="form-label">Nombre:</label>
-                                <input type="text" name="Nombre" id="Nombre" class="form-control" placeholder="EJ: José Pérez" required>
+                                <input type="text" name="Nombre" id="Nombre" class="form-control" placeholder="EJ: José Pérez" pattern="^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$" title="Utiliza únicamente letras y espacios en blanco." required>
                             </div>
                             <div class="mb-3">
                                 <label for="Email" class="form-label">Email:</label>
-                                <input type="email" name="Email" id="Email" class="form-control" placeholder="EJ: jose31@gmail.com" required>
+                                <input type="email" name="Email" id="Email" class="form-control" placeholder="EJ: jose31@gmail.com" pattern="^(\w+[/./-]?){1,}@[a-z]+[/.]\w{2,}$" title="Introduce un correo electrónico válido." required>
                             </div>
                             <div class="mb-3">
                                 <label for="Edad" class="form-label">Edad:<i>(Opcional)</i></label>
